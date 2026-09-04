@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Далер Хамидов — Senior AI Engineer | Резюме</title>
+  <meta name="description" content="Резюме Далера Хамидова — Senior AI Engineer: AI Platforms, LangGraph Agents, Voice AI (Asterisk, WebRTC), Backend & Real-Time Systems." />
+  <meta name="author" content="Далер Хамидов" />
+  
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:title" content="Далер Хамидов — Senior AI Engineer" />
+  <meta property="og:description" content="Senior AI Engineer с 4+ годами опыта: AI-платформы, агентные архитектуры (LangGraph), голосовые роботы телефонии (Asterisk, 450-700ms), распределенный backend и real-time системы." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://khamidovdaler.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts & Tailwind CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar & Print Optimizations */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-break-inside-avoid {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+      .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl {
+        box-shadow: none !important;
+      }
+      .border {
+        border-color: #cbd5e1 !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+      .bg-slate-900, .bg-slate-950, .bg-slate-800, .bg-slate-900\/50, .dark .dark\:bg-slate-900 {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+      }
+      .text-slate-400, .text-slate-300, .text-slate-200 {
+        color: #334155 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-indigo-500 selection:text-white">
+
+  <!-- Top Sticky Navigation Bar (Hidden in Print) -->
+  <header class="no-print sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-bold text-white text-base shadow-lg shadow-indigo-500/20">
+          ДХ
+        </div>
+        <div>
+          <span class="font-bold text-slate-100 tracking-tight text-sm sm:text-base">Далер Хамидов</span>
+          <span class="hidden md:inline-block text-xs text-slate-400 ml-2 font-mono">Senior AI Engineer</span>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <!-- PDF Download Button -->
+        <a href="daler-khamidov-resume.pdf" download="Далер_Хамидов_Senior_AI_Engineer.pdf" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition shadow-md shadow-indigo-600/30">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          <span class="hidden sm:inline">Скачать PDF</span>
+          <span class="sm:hidden">PDF</span>
+        </a>
+
+        <!-- Print Button -->
+        <button onclick="window.print()" class="inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 transition border border-slate-700">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+          <span class="hidden sm:inline">Печать</span>
+        </button>
+
+        <!-- Telegram Link -->
+        <a href="https://t.me/sutekinamirai" target="_blank" rel="noopener" class="inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600/20 hover:bg-sky-600/30 text-sky-400 transition border border-sky-500/30">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.536-.196 1.006.128.832.946z"/></svg>
+          <span class="hidden sm:inline">Telegram</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12">
+
+    <!-- Hero Header / Profile Section -->
+    <section class="relative bg-gradient-to-b from-slate-900 to-slate-900/60 rounded-2xl p-6 sm:p-8 border border-slate-800 shadow-xl overflow-hidden page-break-inside-avoid">
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="space-y-3">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Open to Senior AI / Tech Lead roles</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            Далер Хамидов
+          </h1>
+          <p class="text-base sm:text-lg font-medium text-indigo-400">
+            Senior AI Engineer | AI Platforms, Backend & Real-Time Systems
+          </p>
+
+          <p class="text-sm text-slate-300 max-w-2xl leading-relaxed">
+            Архитектор и разработчик распределенных production-систем на стыке генеративного интеллекта, агентных архитектур, голосовой телефонии и real-time сервисов.
+          </p>
+        </div>
+
+        <!-- Quick Action Buttons -->
+        <div class="no-print flex flex-wrap gap-2.5 shrink-0">
+          <a href="https://t.me/sutekinamirai" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-semibold transition flex items-center space-x-2 shadow-lg shadow-indigo-600/30">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.536-.196 1.006.128.832.946z"/></svg>
+            <span>Написать в Telegram</span>
+          </a>
+          <button onclick="copyContacts()" id="copyBtn" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-medium transition border border-slate-700 flex items-center space-x-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+            <span id="copyBtnText">Скопировать контакты</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Contact Info Grid -->
+      <div class="mt-6 pt-6 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs sm:text-sm font-medium">
+        <a href="mailto:khamidovdaler24@gmail.com" class="flex items-center space-x-2.5 text-slate-300 hover:text-indigo-400 transition group">
+          <span class="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-indigo-400 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          </span>
+          <span class="truncate">khamidovdaler24@gmail.com</span>
+        </a>
+
+        <a href="tel:+998934509518" class="flex items-center space-x-2.5 text-slate-300 hover:text-indigo-400 transition group">
+          <span class="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-indigo-400 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          </span>
+          <span>+998 93 450 95 18</span>
+        </a>
+
+        <div class="flex items-center space-x-2.5 text-slate-300">
+          <span class="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          </span>
+          <span>Ташкент, Узбекистан</span>
+        </div>
+
+        <a href="https://t.me/sutekinamirai" target="_blank" rel="noopener" class="flex items-center space-x-2.5 text-slate-300 hover:text-sky-400 transition group">
+          <span class="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-sky-400 transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.536-.196 1.006.128.832.946z"/></svg>
+          </span>
+          <span class="font-mono text-xs">@sutekinamirai</span>
+        </a>
+
+        <div class="flex items-center space-x-2.5 text-slate-300">
+          <span class="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          </span>
+          <span>Опыт: 4+ года</span>
+        </div>
+
+        <div class="flex items-center space-x-2.5 text-slate-300">
+          <span class="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+          </span>
+          <span>RU (родной), EN (B2), UZ (B2)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Профиль и область экспертизы -->
+    <section class="space-y-4 page-break-inside-avoid">
+      <div class="flex items-center space-x-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="text-indigo-400">#</span> Профиль и область экспертизы
+        </h2>
+        <div class="h-px bg-slate-800 flex-1"></div>
+      </div>
+
+      <div class="bg-slate-900/60 rounded-xl p-6 border border-slate-800 space-y-4">
+        <p class="text-slate-200 leading-relaxed text-sm sm:text-base">
+          <strong class="text-white">Senior AI Engineer</strong> с 4+ годами опыта в проектировании и выводе в production распределенных AI-платформ, backend-систем, голосовой телефонии и real-time сервисов.
+        </p>
+        <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+          <strong class="text-indigo-300">Ключевой фокус</strong> — создание надежной инфраструктуры вокруг LLM: агентные архитектуры (<code class="text-indigo-300 font-mono text-xs">LangGraph</code>), сохранение контекста и состояний, отказоустойчивость внешних интеграций, потоковая обработка аудио с низкой задержкой (<code class="text-indigo-300 font-mono text-xs">low-latency audio pipelines</code>) и бесшовный human-in-the-loop (эскалация на оператора).
+        </p>
+
+        <!-- Scope Badges -->
+        <div class="pt-2 flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">AI-платформы и мультиагентные системы</span>
+          <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">Voice AI & Телефония (450–700 мс)</span>
+          <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">High-Load Backend & Очереди задач</span>
+          <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">Real-Time (WebRTC, WebSocket, SSE)</span>
+          <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">RAG, pgvector & Knowledge Graphs</span>
+          <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">Мультитенантный SaaS & Row-Level Security</span>
+          <span class="px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">Интеграции: Bitrix24, 1С, Telegram, WhatsApp</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Профессиональные навыки -->
+    <section class="space-y-4 page-break-inside-avoid">
+      <div class="flex items-center space-x-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="text-indigo-400">#</span> Профессиональные навыки
+        </h2>
+        <div class="h-px bg-slate-800 flex-1"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- AI Engineering -->
+        <div class="bg-slate-900/50 rounded-xl p-5 border border-slate-800 hover:border-slate-700 transition space-y-2.5">
+          <div class="flex items-center space-x-2 text-indigo-400 font-semibold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <span>AI Engineering</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            LangGraph, LangChain, LLM agents, ReAct, tool calling, structured output, prompt engineering, guardrails, RAG, FAISS, pgvector, embeddings, multimodal AI.
+          </p>
+        </div>
+
+        <!-- Speech AI -->
+        <div class="bg-slate-900/50 rounded-xl p-5 border border-slate-800 hover:border-slate-700 transition space-y-2.5">
+          <div class="flex items-center space-x-2 text-indigo-400 font-semibold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+            <span>Speech AI</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            STT, TTS, streaming transcription, voice activity detection (VAD), barge-in, speaker diarization, call scoring, Whisper, Deepgram, ElevenLabs, Piper, Kokoro, Vosk.
+          </p>
+        </div>
+
+        <!-- Backend -->
+        <div class="bg-slate-900/50 rounded-xl p-5 border border-slate-800 hover:border-slate-700 transition space-y-2.5">
+          <div class="flex items-center space-x-2 text-indigo-400 font-semibold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+            <span>Backend Development</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Python, FastAPI, asyncio, REST API, WebSockets, SQLAlchemy, Pydantic, background workers, retries, circuit breakers, idempotency, transactional outbox.
+          </p>
+        </div>
+
+        <!-- Real-Time & Telephony -->
+        <div class="bg-slate-900/50 rounded-xl p-5 border border-slate-800 hover:border-slate-700 transition space-y-2.5">
+          <div class="flex items-center space-x-2 text-indigo-400 font-semibold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            <span>Real-Time и телефония</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Asterisk, ARI, PJSIP, RTP, AudioSocket, WebRTC, SSE, OBS Browser Source, low-latency audio pipelines.
+          </p>
+        </div>
+
+        <!-- Data Engineering -->
+        <div class="bg-slate-900/50 rounded-xl p-5 border border-slate-800 hover:border-slate-700 transition space-y-2.5">
+          <div class="flex items-center space-x-2 text-indigo-400 font-semibold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+            <span>Data Engineering & Search</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            PostgreSQL, Redis, SQLite, JSONB, pgvector, data ingestion, normalization, deduplication, entity resolution, full-text search, knowledge graphs.
+          </p>
+        </div>
+
+        <!-- Frontend -->
+        <div class="bg-slate-900/50 rounded-xl p-5 border border-slate-800 hover:border-slate-700 transition space-y-2.5">
+          <div class="flex items-center space-x-2 text-indigo-400 font-semibold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+            <span>Frontend & UI</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            React, TypeScript, JavaScript, Next.js, Vite, Tailwind CSS, Zustand, Web Audio API, WebRTC, real-time dashboards, Telegram Mini Apps.
+          </p>
+        </div>
+
+        <!-- Integrations -->
+        <div class="bg-slate-900/50 rounded-xl p-5 border border-slate-800 hover:border-slate-700 transition space-y-2.5">
+          <div class="flex items-center space-x-2 text-indigo-400 font-semibold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            <span>Интеграции & CRM</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Bitrix24, 1С:Предприятие, Telegram Bot API, Telegram MTProto, WhatsApp Cloud API, Instagram Graph API, Google Calendar, Microsoft Graph.
+          </p>
+        </div>
+
+        <!-- Production Engineering -->
+        <div class="bg-slate-900/50 rounded-xl p-5 border border-slate-800 hover:border-slate-700 transition space-y-2.5">
+          <div class="flex items-center space-x-2 text-indigo-400 font-semibold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            <span>Production Engineering & Reliability</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Docker, Docker Compose, Nginx, Linux, systemd, CI/CD, health checks, мониторинг, логирование, Pytest, Vitest, Playwright.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Опыт работы -->
+    <section class="space-y-6 page-break-inside-avoid">
+      <div class="flex items-center space-x-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="text-indigo-400">#</span> Опыт работы
+        </h2>
+        <div class="h-px bg-slate-800 flex-1"></div>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Kinesis -->
+        <div class="relative pl-6 sm:pl-8 border-l-2 border-indigo-500/50 space-y-3">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-indigo-500"></div>
+          
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <div>
+              <h3 class="text-lg font-bold text-white">Kinesis</h3>
+              <p class="text-sm font-semibold text-indigo-400">Senior AI Engineer / Backend & AI Systems Engineer</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800 w-fit">
+              09.2025 — настоящее время
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Разработка омниканальной экосистемы AI-продуктов для автоматизации продаж, клиентской поддержки, SIP-телефонии и контроля качества коммуникаций.
+          </p>
+
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-indigo-400">
+            <li>Спроектировал распределенную backend-архитектуру платформы для обработки текстовых, голосовых и мультимодальных обращений из мессенджеров, CRM и телефонии.</li>
+            <li>Разработал агентную платформу на FastAPI и LangGraph с оркестрацией вызова внешних инструментов и поддержкой передачи диалога оператору.</li>
+            <li>Построил отказоустойчивую инфраструктуру очередей и планировщиков задач (аренда задач, Dead-Letter Queue, ретраи с учетом рабочих часов и часовых поясов).</li>
+            <li>Организовал интеграции с Bitrix24, 1С, Telegram, WhatsApp, Instagram и пулом внешних/локальных AI-провайдеров.</li>
+            <li>Разработал операторскую консоль на React/TypeScript для контроля обращений, мониторинга звонков, SLA и статусов агентов в реальном времени.</li>
+            <li>Настроил production-окружение: контейнеризацию (Docker Compose), реверс-прокси (Nginx), health checks, централизованное логирование и метрики.</li>
+          </ul>
+        </div>
+
+        <!-- Migorskiy -->
+        <div class="relative pl-6 sm:pl-8 border-l-2 border-slate-700 space-y-3">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-600"></div>
+
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <div>
+              <h3 class="text-lg font-bold text-white">Migorskiy</h3>
+              <p class="text-sm font-semibold text-indigo-400">Middle+ AI Engineer</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800 w-fit">
+              06.2024 — 09.2025
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Разработка прикладных AI-систем для автоматизации клиентского сервиса, продаж и поиска по корпоративным базам знаний.
+          </p>
+
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-indigo-400">
+            <li>Разрабатывал агентные цепочки (agentic workflows) на LangGraph с маршрутизацией между CRM-инструментами и сохранением истории диалога в Telegram и WhatsApp.</li>
+            <li>Внедрил RAG-пайплайны по корпоративной документации с гибридным поиском на базе FAISS и pgvector.</li>
+            <li>Настроил сквозную синхронизацию с Bitrix24 и 1С (автоматическое создание сделок, выставление счетов, обновление статусов).</li>
+            <li>Разработал мультимодальный процессинг входящих голосовых сообщений и изображений для передачи в контекст диалога.</li>
+            <li>Обеспечил стабильность интеграций: реализовал circuit breakers, таймауты и адаптивные повторные попытки при сбоях внешних API.</li>
+          </ul>
+        </div>
+
+        <!-- DataCore Solutions -->
+        <div class="relative pl-6 sm:pl-8 border-l-2 border-slate-800 space-y-3">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-700"></div>
+
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <div>
+              <h3 class="text-lg font-bold text-white">DataCore Solutions</h3>
+              <p class="text-sm font-semibold text-indigo-400">Middle Backend Engineer</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800 w-fit">
+              05.2022 — 05.2024
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Разработка backend-сервисов и API-интеграций для корпоративных систем.
+          </p>
+
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-indigo-400">
+            <li>Проектировал реляционные схемы данных в PostgreSQL и разрабатывал REST API на FastAPI, SQLAlchemy и Alembic.</li>
+            <li>Интегрировал сервисы с Bitrix24 и 1С через REST API и вебхуки.</li>
+            <li>Разрабатывал асинхронные воркеры для формирования отчетов, выгрузок и синхронизации сущностей.</li>
+            <li>Использовал Redis для кеширования, хранения сессий и управления очередями задач.</li>
+            <li>Покрывал сервисы автоматическими тестами (Pytest) и настраивал контейнеризацию в Docker.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ключевые проекты -->
+    <section class="space-y-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3 flex-1">
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+            <span class="text-indigo-400">#</span> Ключевые инженерные проекты
+          </h2>
+          <div class="h-px bg-slate-800 flex-1"></div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6">
+        <!-- Project 1: Hub -->
+        <article class="bg-slate-900/60 rounded-2xl p-6 border border-slate-800 hover:border-indigo-500/40 transition space-y-4 page-break-inside-avoid">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-lg sm:text-xl font-bold text-white">Hub — Омниканальная AI-платформа</h3>
+                <span class="text-xs px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono">Platform</span>
+              </div>
+              <p class="text-xs text-indigo-400 font-medium mt-0.5">Architecture, AI, Backend, Real-Time, CRM</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md shrink-0">2025 — настоящее время</span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Единая платформа автоматизации клиентских коммуникаций (Telegram, WhatsApp, Instagram, Bitrix24, Web-чат, SIP-телефония).
+          </p>
+
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-indigo-400">
+            <li>Спроектировал агентов для квалификации лидов, поиска по базам знаний и выполнения целевых действий в CRM.</li>
+            <li>Реализовал персистентность графов LangGraph: сохранение состояний диалога и автоматическое восстановление после сбоев.</li>
+            <li>Построил real-time транспорт на WebSockets для моментального обновления диалогов, звонков и статусов в интерфейсе оператора.</li>
+            <li>Внедрил RAG-поиск по регламентам с изоляцией контекста знаний по проектам и агентам.</li>
+          </ul>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80">
+            <div class="text-xs text-slate-400">
+              <strong class="text-slate-300">Стек:</strong> Python, FastAPI, PostgreSQL, Redis, LangGraph, pgvector, React, TypeScript, Docker, Bitrix24, Asterisk.
+            </div>
+            <a href="https://github.com/phloya/resume/blob/main/airoporthub.md" target="_blank" class="no-print text-xs text-indigo-400 hover:text-indigo-300 flex items-center space-x-1 font-mono">
+              <span>Досье архитектуры</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Voice AI -->
+        <article class="bg-slate-900/60 rounded-2xl p-6 border border-slate-800 hover:border-emerald-500/40 transition space-y-4 page-break-inside-avoid">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-lg sm:text-xl font-bold text-white">Голосовой AI-агент для телефонии (AVA)</h3>
+                <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono">Low-Latency</span>
+              </div>
+              <p class="text-xs text-emerald-400 font-medium mt-0.5">Voice AI, Telephony, Real-Time Audio</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md shrink-0">2025 — настоящее время</span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Платформа входящих и исходящих телефонных звонков с AI через Asterisk в режиме реального времени.
+          </p>
+
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-emerald-400">
+            <li>Построил потоковый аудиоконвейер (Asterisk, ARI, AudioSocket, RTP) с обработкой аудиофреймов без промежуточного сохранения на диск.</li>
+            <li>Внедрил VAD и механизм barge-in: агент моментально прерывает речь, если клиент начинает говорить.</li>
+            <li>Настроил распознавание автоответчиков, fallback на статические реплики при таймаутах и бесшовный перевод звонка на оператора с передачей контекста.</li>
+            <li>Запустил движок исходящего обзвона с контролем таймзон и распределением лидов.</li>
+            <li>Развернул локальный сервер инференса для on-premise и air-gapped сценариев.</li>
+          </ul>
+
+          <div class="bg-emerald-950/30 border border-emerald-800/40 rounded-lg p-3 text-xs text-emerald-300">
+            ⚡ <strong>Результат:</strong> Задержка ответа (Time-to-First-Audio) составляет <strong>450–700 мс</strong>.
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80">
+            <div class="text-xs text-slate-400">
+              <strong class="text-slate-300">Стек:</strong> Python, asyncio, Asterisk, ARI, RTP, AudioSocket, WebSocket, Whisper, Deepgram, OpenAI Realtime, Gemini Live, Docker.
+            </div>
+            <a href="https://github.com/phloya/resume/blob/main/telephony.md" target="_blank" class="no-print text-xs text-emerald-400 hover:text-emerald-300 flex items-center space-x-1 font-mono">
+              <span>Досье архитектуры (>205K LOC)</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Sales AI -->
+        <article class="bg-slate-900/60 rounded-2xl p-6 border border-slate-800 hover:border-indigo-500/40 transition space-y-4 page-break-inside-avoid">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-lg sm:text-xl font-bold text-white">AI-ассистент для продаж</h3>
+                <span class="text-xs px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono">Conversational AI</span>
+              </div>
+              <p class="text-xs text-indigo-400 font-medium mt-0.5">Conversational AI, CRM Automation, Multimodal AI</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md shrink-0">2025 — 2026</span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Автономный агент первичного контакта в Telegram (MTProto) и открытых линиях Bitrix24.
+          </p>
+
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-indigo-400">
+            <li>Автоматизировал сбор требований клиента и формирование валидированной карточки лида через structured output (Pydantic).</li>
+            <li>Реализовал дедупликацию входящих событий при параллельных сообщениях клиента, предотвратив создание дублей сделок.</li>
+            <li>Внедрил защиту от prompt injection и небезопасных инструкций.</li>
+            <li>Настроил каскадный fallback между LLM-провайдерами при исчерпании квот или задержках ответов.</li>
+          </ul>
+
+          <div class="bg-indigo-950/30 border border-indigo-800/40 rounded-lg p-3 text-xs text-indigo-300">
+            ⚡ <strong>Результат:</strong> Время первого ответа на входящий лид сократилось с нескольких минут до <strong>нескольких секунд</strong>.
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80">
+            <div class="text-xs text-slate-400">
+              <strong class="text-slate-300">Стек:</strong> Python, FastAPI, LangGraph, PostgreSQL, Redis, Telethon, Bitrix24, Pydantic, Docker.
+            </div>
+            <a href="https://github.com/phloya/resume/blob/main/aisha.md" target="_blank" class="no-print text-xs text-indigo-400 hover:text-indigo-300 flex items-center space-x-1 font-mono">
+              <span>Досье архитектуры</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: Control SaaS -->
+        <article class="bg-slate-900/60 rounded-2xl p-6 border border-slate-800 hover:border-indigo-500/40 transition space-y-4 page-break-inside-avoid">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-lg sm:text-xl font-bold text-white">Control — SaaS-платформа поддержки и SLA</h3>
+                <span class="text-xs px-2 py-0.5 rounded bg-violet-500/20 text-violet-300 font-mono">Enterprise B2B</span>
+              </div>
+              <p class="text-xs text-violet-400 font-medium mt-0.5">Backend Architecture, Multi-Tenancy, Security</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md shrink-0">2024 — 2025</span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Мультитенантная B2B-система управления техническими обращениями корпоративных клиентов.
+          </p>
+
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-violet-400">
+            <li>Спроектировал изоляцию клиентских данных на уровне PostgreSQL Row-Level Security (RLS).</li>
+            <li>Внедрил паттерны Transactional Outbox и Idempotency Keys для гарантированной доставки событий и исключения повторных списаний квот.</li>
+            <li>Реализовал движок расчета SLA с учетом производственного календаря, часовых поясов и статусов ожидания клиента.</li>
+            <li>Разработал Telegram-бота и Telegram Mini App для быстрой подачи и согласования заявок.</li>
+            <li>Настроил потоковую загрузку медиафайлов в S3-совместимое хранилище (MinIO).</li>
+          </ul>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80">
+            <div class="text-xs text-slate-400">
+              <strong class="text-slate-300">Стек:</strong> Python, FastAPI, PostgreSQL, SQLAlchemy, React, TypeScript, Telegram, MinIO, Docker.
+            </div>
+            <a href="https://github.com/phloya/resume/blob/main/kontrol.md" target="_blank" class="no-print text-xs text-violet-400 hover:text-violet-300 flex items-center space-x-1 font-mono">
+              <span>Досье архитектуры</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5: Pulsar -->
+        <article class="bg-slate-900/60 rounded-2xl p-6 border border-slate-800 hover:border-indigo-500/40 transition space-y-4 page-break-inside-avoid">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-lg sm:text-xl font-bold text-white">Платформа анализа закупок (Pulsar)</h3>
+                <span class="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono">Data & Search</span>
+              </div>
+              <p class="text-xs text-amber-400 font-medium mt-0.5">Data Engineering, Search, Knowledge Graph, AI</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md shrink-0">2024 — 2025</span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Система мониторинга и анализа коммерческих и государственных тендеров Центральной Азии.
+          </p>
+
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-amber-400">
+            <li>Спроектировал ingestion-пайплайн для нормализации и валидации данных из 13 разнородных источников.</li>
+            <li>Реализовал версионирование условий закупок, дедупликацию записей и механизм изоляции (карантин) поврежденных данных.</li>
+            <li>Построил граф взаимосвязей между компаниями, контрактами, аффилированными лицами и предметами торгов.</li>
+            <li>Разработал гибридный полнотекстовый и векторный поиск по тендерной документации с AI-ассистентом.</li>
+          </ul>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80">
+            <div class="text-xs text-slate-400">
+              <strong class="text-slate-300">Стек:</strong> Python, FastAPI, PostgreSQL, pgvector, FAISS, React, TypeScript, APScheduler, Docker.
+            </div>
+            <a href="https://github.com/phloya/resume/blob/main/pulsar.md" target="_blank" class="no-print text-xs text-amber-400 hover:text-amber-300 flex items-center space-x-1 font-mono">
+              <span>Досье архитектуры</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 6: Speech QA -->
+        <article class="bg-slate-900/60 rounded-2xl p-6 border border-slate-800 hover:border-indigo-500/40 transition space-y-4 page-break-inside-avoid">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-lg sm:text-xl font-bold text-white">Speech QA — Речевая аналитика и контроль качества</h3>
+                <span class="text-xs px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 font-mono">Speech Analytics</span>
+              </div>
+              <p class="text-xs text-rose-400 font-medium mt-0.5">Speech AI, Analytics, Evaluation Systems</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md shrink-0">2025 — настоящее время</span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Автоматизированный аудит диалогов менеджеров и голосовых агентов.
+          </p>
+
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-rose-400">
+            <li>Внедрил пайплайн транскрибации, диаризации и проверки соответствия чек-листам и регламентам.</li>
+            <li>Реализовал подтверждение выводов модели прямыми цитатами и таймкодами из стенограммы для исключения галлюцинаций.</li>
+            <li>Спроектировал детерминированный расчет штрафных баллов и механизм фонового пересчета архивных звонков при обновлении критериев.</li>
+            <li>Разработал интерфейс супервизора с синхронным воспроизведением аудиозаписи и подсветкой нарушений.</li>
+          </ul>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80">
+            <div class="text-xs text-slate-400">
+              <strong class="text-slate-300">Стек:</strong> Python, FastAPI, PostgreSQL, Next.js, React, TypeScript, STT, LLM APIs.
+            </div>
+            <a href="https://github.com/phloya/resume/blob/main/transcribe.md" target="_blank" class="no-print text-xs text-rose-400 hover:text-rose-300 flex items-center space-x-1 font-mono">
+              <span>Досье архитектуры</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 7: Subtitles -->
+        <article class="bg-slate-900/60 rounded-2xl p-6 border border-slate-800 hover:border-indigo-500/40 transition space-y-4 page-break-inside-avoid">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-lg sm:text-xl font-bold text-white">Realtime Translation Subtitles</h3>
+                <span class="text-xs px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">WebRTC & Audio</span>
+              </div>
+              <p class="text-xs text-cyan-400 font-medium mt-0.5">Real-Time Systems, WebRTC, Audio Processing, Frontend</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md shrink-0">2025 — 2026</span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Система синхронного перевода речи для OBS Studio, Zoom и Google Meet.
+          </p>
+
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-cyan-400">
+            <li>Настроил прямое аудиосоединение через WebRTC в AI-модель в обход backend-проксирования, минимизировав задержки.</li>
+            <li>Реализовал клиентскую фильтрацию шумов (Web Audio API) и SSE-доставку субтитров в OBS Browser Source.</li>
+            <li>Спроектировал двухстрочный оверлей с адаптивным переносом текста и троттлингом частых апдейтов.</li>
+          </ul>
+
+          <div class="bg-cyan-950/30 border border-cyan-800/40 rounded-lg p-3 text-xs text-cyan-300">
+            ⚡ <strong>Результат:</strong> Задержка синхронного вывода субтитров составила <strong>500–800 мс</strong>.
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80">
+            <div class="text-xs text-slate-400">
+              <strong class="text-slate-300">Стек:</strong> Node.js, WebRTC, Web Audio API, SSE, JavaScript, OBS Studio, Docker.
+            </div>
+            <a href="https://github.com/phloya/resume/blob/main/subtitle.md" target="_blank" class="no-print text-xs text-cyan-400 hover:text-cyan-300 flex items-center space-x-1 font-mono">
+              <span>Досье архитектуры</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 8: Web Platform -->
+        <article class="bg-slate-900/60 rounded-2xl p-6 border border-slate-800 hover:border-indigo-500/40 transition space-y-4 page-break-inside-avoid">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-lg sm:text-xl font-bold text-white">Web Platform — Web-продукты и AI-интерфейсы</h3>
+                <span class="text-xs px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono">Frontend & UI</span>
+              </div>
+              <p class="text-xs text-blue-400 font-medium mt-0.5">Frontend, Product UI, WebGL, Integrations</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md shrink-0">2024 — 2026</span>
+          </div>
+
+          <p class="text-xs sm:text-sm italic text-slate-400">
+            Набор интерактивных витрин и маркетинговых инструментов для экосистемы Kinesis.
+          </p>
+
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300 list-disc pl-4 marker:text-blue-400">
+            <li>Разработал интерактивный калькулятор ROI для расчета экономической эффективности внедрения AI-агентов.</li>
+            <li>Реализовал клиентскую генерацию брендированных PDF-отчетов с поддержкой кириллических шрифтов.</li>
+            <li>Настроил сквозное сохранение UTM-меток на протяжении сессии и fallback-кеширование контента при сбоях БД.</li>
+          </ul>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80">
+            <div class="text-xs text-slate-400">
+              <strong class="text-slate-300">Стек:</strong> React, TypeScript, Node.js, Vite, WebGL, Web Audio API, Supabase, PostgreSQL, Docker.
+            </div>
+            <a href="https://github.com/phloya/resume/blob/main/site.md" target="_blank" class="no-print text-xs text-blue-400 hover:text-blue-300 flex items-center space-x-1 font-mono">
+              <span>Досье архитектуры</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Образование -->
+    <section class="space-y-4 page-break-inside-avoid">
+      <div class="flex items-center space-x-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <span class="text-indigo-400">#</span> Образование
+        </h2>
+        <div class="h-px bg-slate-800 flex-1"></div>
+      </div>
+
+      <div class="bg-slate-900/60 rounded-xl p-6 border border-slate-800 space-y-2">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1">
+          <div>
+            <h3 class="text-base sm:text-lg font-bold text-white">
+              Ташкентский университет информационных технологий, Самаркандский филиал (САМТУИТ)
+            </h3>
+            <p class="text-sm font-semibold text-indigo-400">
+              Искусственный интеллект · Бакалавр · <span class="text-emerald-400 font-mono">GPA 4.1</span>
+            </p>
+          </div>
+          <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md shrink-0 w-fit">
+            09/2022 — 06/2027
+          </span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+          Специализация: архитектура программного обеспечения, базы данных, компьютерные сети, структуры данных и алгоритмы.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div class="flex items-center space-x-2">
+        <span>© 2026 Далер Хамидов</span>
+        <span>•</span>
+        <a href="https://khamidovdaler.com" class="hover:text-white transition">khamidovdaler.com</a>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <a href="https://github.com/phloya/resume" target="_blank" rel="noopener" class="hover:text-indigo-400 transition flex items-center space-x-1">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          <span>GitHub Репозиторий</span>
+        </a>
+        <span>•</span>
+        <a href="daler-khamidov-resume.pdf" download="Далер_Хамидов_Senior_AI_Engineer.pdf" class="hover:text-indigo-400 transition">
+          PDF Версия
+        </a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Interactive Scripts -->
+  <script>
+    function copyContacts() {
+      const text = "Далер Хамидов — Senior AI Engineer\nEmail: khamidovdaler24@gmail.com\nТелефон: +998 93 450 95 18\nTelegram: https://t.me/sutekinamirai\nСайт: https://khamidovdaler.com";
+      navigator.clipboard.writeText(text).then(() => {
+        const btnText = document.getElementById("copyBtnText");
+        const orig = btnText.innerText;
+        btnText.innerText = "Скопировано!";
+        setTimeout(() => {
+          btnText.innerText = orig;
+        }, 2500);
+      });
+    }
+  </script>
+</body>
+</html>
