@@ -11,7 +11,7 @@
 
 ## 📌 Профиль
 
-**Senior AI Engineer** с 4+ годами опыта в проектировании и выводе в production распределенных AI-платформ, backend-систем, голосовой телефонии и real-time сервисов.
+**Senior AI Engineer** с опытом проектирования и вывода в production распределенных AI-платформ, backend-систем, голосовой телефонии и real-time сервисов.
 
 **Ключевой фокус:**
 - Агентные архитектуры на **LangGraph** (персистентность графов, tool calling, structured output, human-in-the-loop).
