@@ -36,25 +36,3 @@
 7. 🌐 [Realtime Translation Subtitles](subtitle.md) — *WebRTC, Web Audio API, SSE, OBS Studio (500–800 мс)*
 8. 💻 [Web Platform — Web-продукты и AI-интерфейсы](site.md) — *React, TypeScript, WebGL, генерация PDF*
 9. 📑 [Комплексный технический аудит](technical_audit.md)
-
----
-
-## 🛠️ Настройка DNS для домена `khamidovdaler.com`
-
-Чтобы домен `khamidovdaler.com` открывал этот сайт через GitHub Pages:
-
-В панели управления доменом (**Spaceship** / **Cloudflare** / **DNS Provider**) добавьте 4 **A-записи** для apex-домена `@`:
-
-| Тип | Имя / Хост | Значение (IP-адрес) |
-|---|---|---|
-| **A** | `@` (или пусто) | `185.199.108.153` |
-| **A** | `@` (или пусто) | `185.199.109.153` |
-| **A** | `@` (или пусто) | `185.199.110.153` |
-| **A** | `@` (или пусто) | `185.199.111.153` |
-
-*(Опционально)* Для поддомена `www`:
-| Тип | Имя / Хост | Значение |
-|---|---|---|
-| **CNAME** | `www` | `phloya.github.io.` |
-
-GitHub Pages автоматически выпустит бесплатный SSL/TLS сертификат (Let's Encrypt).
